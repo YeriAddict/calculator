@@ -1,4 +1,4 @@
-package leang.corporation.master;
+package leang.corporation.main;
 
 import leang.corporation.frame.FrameManager;
 

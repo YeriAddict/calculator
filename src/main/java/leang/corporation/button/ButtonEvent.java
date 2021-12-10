@@ -37,8 +37,18 @@ public class ButtonEvent {
 		}
 	}
 
-	public void deleteButtonEvent() {
-
+	public void deleteButtonEvent(TextField resultScreenText, ActionEvent e, Button deleteButton, List<String> numberString, double[] number) {
+		if (e.getSource() == deleteButton) {
+			if (resultScreenText.getText().isEmpty() == false) {
+				resultScreenText.setText(resultScreenText.getText().substring(0, resultScreenText.getText().length() - 1));
+				if (numberString.size() != 0) {
+					numberString.remove(numberString.size() - 1);
+					if (numberString.size() > 1 ) {
+						number[0] = Double.parseDouble(String.join("", numberString));
+					}
+				}	
+			}
+		}
 	}
 
 	public void resetButtonEvent(TextField resultScreenText, ActionEvent e, Button resetButton, List<String> numberString) {
@@ -113,11 +123,5 @@ public class ButtonEvent {
 			operator[0] = '%';
 			resultScreenText.setText("0");
 		}
-	}
-
-	public void scientificButtonEvent() {
-	}
-
-	public void parenthesisButtonEvent() {
 	}
 }
