@@ -51,16 +51,18 @@ public class ButtonEvent {
 		}
 	}
 
-	public void resetButtonEvent(TextField resultScreenText, ActionEvent e, Button resetButton, List<String> numberString, double[] result, double number[]) {
+	public void resetButtonEvent(TextField resultScreenText, ActionEvent e, Button resetButton, List<String> numberString, char[] operator, char[] operatorTester, double[] result, double number[]) {
 		if (e.getSource() == resetButton) {
 			numberString.clear();
 			result[0] = 0;
 			number[0] = 0; 
+			operatorTester[0] = 'N';
+			operator[0] ='N';
 			resultScreenText.setText("0");
 		}
 	}
 	
-	public void equalButtonEvent(TextField resultScreenText, ActionEvent e, Button equalButton, List<String> numberString, char[] operator, double[] result, double number[], char[] operatorTester) {
+	public void equalButtonEvent(TextField resultScreenText, ActionEvent e, Button equalButton, List<String> numberString, char[] operator, char[] operatorTester, double[] result, double number[]) {
 		if (e.getSource() == equalButton) {
 			numberString.clear();
 			if (operator[0] == '+') {
@@ -83,7 +85,7 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void additionButtonEvent(TextField resultScreenText, ActionEvent e, Button additionButton, List<String> numberString, char[] operator, double[] result, char[] operatorTester) {
+	public void additionButtonEvent(TextField resultScreenText, ActionEvent e, Button additionButton, List<String> numberString, char[] operator, char[] operatorTester, double[] result) {
 		if (e.getSource() == additionButton) {
 			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
 				numberString.clear();
@@ -107,7 +109,7 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void subtractionButtonEvent(TextField resultScreenText, ActionEvent e, Button subtractionButton, List<String> numberString, char[] operator, double[] result, char[] operatorTester) {
+	public void subtractionButtonEvent(TextField resultScreenText, ActionEvent e, Button subtractionButton, List<String> numberString, char[] operator, char[] operatorTester, double[] result) {
 		if (e.getSource() == subtractionButton) {
 			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
 				numberString.clear();
@@ -131,7 +133,7 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void multiplicationButtonEvent(TextField resultScreenText, ActionEvent e, Button multiplicationButton, List<String> numberString, char[] operator, double[] result, char[] operatorTester) {
+	public void multiplicationButtonEvent(TextField resultScreenText, ActionEvent e, Button multiplicationButton, List<String> numberString, char[] operator, char[] operatorTester, double[] result) {
 		if (e.getSource() == multiplicationButton) {
 			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
 				numberString.clear();
@@ -155,7 +157,7 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void divisionButtonEvent(TextField resultScreenText, ActionEvent e, Button divisionButton, List<String> numberString, char[] operator, double[] result, char[] operatorTester) {
+	public void divisionButtonEvent(TextField resultScreenText, ActionEvent e, Button divisionButton, List<String> numberString, char[] operator, char[] operatorTester, double[] result) {
 		if (e.getSource() == divisionButton) {
 			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
 				numberString.clear();
@@ -179,7 +181,7 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void moduloButtonEvent(TextField resultScreenText, ActionEvent e, Button moduloButton, List<String> numberString, char[] operator, double[] result, char[] operatorTester) {
+	public void moduloButtonEvent(TextField resultScreenText, ActionEvent e, Button moduloButton, List<String> numberString, char[] operator, char[] operatorTester, double[] result) {
 		if (e.getSource() == moduloButton) {
 			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
 				numberString.clear();
