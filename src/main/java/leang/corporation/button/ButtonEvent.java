@@ -60,7 +60,7 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void equalButtonEvent(TextField resultScreenText, ActionEvent e, Button equalButton, List<String> numberString, char[] operator, double[] result, double number[], char[] occurenceTester) {
+	public void equalButtonEvent(TextField resultScreenText, ActionEvent e, Button equalButton, List<String> numberString, char[] operator, double[] result, double number[], char[] operatorTester) {
 		if (e.getSource() == equalButton) {
 			numberString.clear();
 			if (operator[0] == '+') {
@@ -78,24 +78,28 @@ public class ButtonEvent {
 			if (operator[0] == '%') {
 				result[0] = arithmetic.modulo(result[0], number[0]);
 			}
-			occurenceTester[0] = 'N';
+			operatorTester[0] = 'N';
 			resultScreenText.setText(String.valueOf(result[0]));
 		}
 	}
 	
-	public void additionButtonEvent(TextField resultScreenText, ActionEvent e, Button additionButton, List<String> numberString, char[] operator, double[] result, char[] occurenceTester) {
+	public void additionButtonEvent(TextField resultScreenText, ActionEvent e, Button additionButton, List<String> numberString, char[] operator, double[] result, char[] operatorTester) {
 		if (e.getSource() == additionButton) {
-			if (resultScreenText.getText().isEmpty() == false && occurenceTester[0] != 'Y') {
+			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
 				numberString.clear();
-				occurenceTester[0] = 'Y';
+				operatorTester[0] = '+';
 				result[0] = Double.parseDouble(resultScreenText.getText());
 				operator[0] = '+';
 				resultScreenText.setText("0");
 			}
-			else if (resultScreenText.getText().isEmpty() == false && occurenceTester[0] == 'Y') {
+			else if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == '+') {
 				numberString.clear();
 				operator[0] = '+';
 				resultScreenText.setText("0");
+			}
+			else if (resultScreenText.getText().isEmpty() == false && (operatorTester[0] == '-' || operatorTester[0] == '*' || operatorTester[0] == '/' || operatorTester[0] == '%')) {
+				numberString.clear();
+				operator[0] = '+';
 			}
 			else {
 				result[0] = 0;
@@ -103,19 +107,23 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void subtractionButtonEvent(TextField resultScreenText, ActionEvent e, Button subtractionButton, List<String> numberString, char[] operator, double[] result, char[] occurenceTester) {
+	public void subtractionButtonEvent(TextField resultScreenText, ActionEvent e, Button subtractionButton, List<String> numberString, char[] operator, double[] result, char[] operatorTester) {
 		if (e.getSource() == subtractionButton) {
-			if (resultScreenText.getText().isEmpty() == false && occurenceTester[0] != 'Y') {
+			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
 				numberString.clear();
-				occurenceTester[0] = 'Y';
+				operatorTester[0] = '-';
 				result[0] = Double.parseDouble(resultScreenText.getText());
 				operator[0] = '-';
 				resultScreenText.setText("0");
 			}
-			else if (resultScreenText.getText().isEmpty() == false && occurenceTester[0] == 'Y') {
+			else if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == '-') {
 				numberString.clear();
 				operator[0] = '-';
 				resultScreenText.setText("0");
+			}
+			else if (resultScreenText.getText().isEmpty() == false && (operatorTester[0] == '+' || operatorTester[0] == '*' || operatorTester[0] == '/' || operatorTester[0] == '%')) {
+				numberString.clear();
+				operator[0] = '-';
 			}
 			else {
 				result[0] = 0;
@@ -123,19 +131,23 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void multiplicationButtonEvent(TextField resultScreenText, ActionEvent e, Button multiplicationButton, List<String> numberString, char[] operator, double[] result, char[] occurenceTester) {
+	public void multiplicationButtonEvent(TextField resultScreenText, ActionEvent e, Button multiplicationButton, List<String> numberString, char[] operator, double[] result, char[] operatorTester) {
 		if (e.getSource() == multiplicationButton) {
-			if (resultScreenText.getText().isEmpty() == false && occurenceTester[0] != 'Y') {
+			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
 				numberString.clear();
-				occurenceTester[0] = 'Y';
+				operatorTester[0] = '*';
 				result[0] = Double.parseDouble(resultScreenText.getText());
 				operator[0] = '*';
 				resultScreenText.setText("0");
 			}
-			else if (resultScreenText.getText().isEmpty() == false && occurenceTester[0] == 'Y') {
+			else if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == '*') {
 				numberString.clear();
 				operator[0] = '*';
 				resultScreenText.setText("0");
+			}
+			else if (resultScreenText.getText().isEmpty() == false && (operatorTester[0] == '+' || operatorTester[0] == '-' || operatorTester[0] == '/' || operatorTester[0] == '%')) {
+				numberString.clear();
+				operator[0] = '*';
 			}
 			else {
 				result[0] = 0;
@@ -143,19 +155,23 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void divisionButtonEvent(TextField resultScreenText, ActionEvent e, Button divisionButton, List<String> numberString, char[] operator, double[] result, char[] occurenceTester) {
+	public void divisionButtonEvent(TextField resultScreenText, ActionEvent e, Button divisionButton, List<String> numberString, char[] operator, double[] result, char[] operatorTester) {
 		if (e.getSource() == divisionButton) {
-			if (resultScreenText.getText().isEmpty() == false && occurenceTester[0] != 'Y') {
+			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
 				numberString.clear();
-				occurenceTester[0] = 'Y';
+				operatorTester[0] = '/';
 				result[0] = Double.parseDouble(resultScreenText.getText());
 				operator[0] = '/';
 				resultScreenText.setText("0");
 			}
-			else if (resultScreenText.getText().isEmpty() == false && occurenceTester[0] == 'Y') {
+			else if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == '/') {
 				numberString.clear();
 				operator[0] = '/';
 				resultScreenText.setText("0");
+			}
+			else if (resultScreenText.getText().isEmpty() == false && (operatorTester[0] == '+' || operatorTester[0] == '-' || operatorTester[0] == '*' || operatorTester[0] == '%')) {
+				numberString.clear();
+				operator[0] = '/';
 			}
 			else {
 				result[0] = 0;
@@ -163,19 +179,23 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void moduloButtonEvent(TextField resultScreenText, ActionEvent e, Button moduloButton, List<String> numberString, char[] operator, double[] result, char[] occurenceTester) {
+	public void moduloButtonEvent(TextField resultScreenText, ActionEvent e, Button moduloButton, List<String> numberString, char[] operator, double[] result, char[] operatorTester) {
 		if (e.getSource() == moduloButton) {
-			if (resultScreenText.getText().isEmpty() == false && occurenceTester[0] != 'Y') {
+			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
 				numberString.clear();
-				occurenceTester[0] = 'Y';
+				operatorTester[0] = '%';
 				result[0] = Double.parseDouble(resultScreenText.getText());
 				operator[0] = '%';
 				resultScreenText.setText("0");
 			}
-			else if (resultScreenText.getText().isEmpty() == false && occurenceTester[0] == 'Y') {
+			else if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == '%') {
 				numberString.clear();
 				operator[0] = '%';
 				resultScreenText.setText("0");
+			}
+			else if (resultScreenText.getText().isEmpty() == false && (operatorTester[0] == '+' || operatorTester[0] == '-' || operatorTester[0] == '*' || operatorTester[0] == '/')) {
+				numberString.clear();
+				operator[0] = '%';
 			}
 			else {
 				result[0] = 0;
