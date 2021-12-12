@@ -25,9 +25,8 @@ public class Calculator {
 			java.util.logging.Logger.getLogger(FrameManager.class.getName()).log(java.util.logging.Level.SEVERE, null,
 					ex);
 		}
-
 		FrameManager manager = new FrameManager();
 		manager.setupMainFrame();
-
 	}
+
 }

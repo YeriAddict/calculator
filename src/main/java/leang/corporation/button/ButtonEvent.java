@@ -7,6 +7,7 @@ import leang.corporation.arithmetic.Arithmetic;
 import leang.corporation.field.TextField;
 
 public class ButtonEvent {
+	
 	Arithmetic arithmetic = new Arithmetic();
 
 	public void numberButtonsEvent(TextField resultScreenText, ActionEvent e, Button[] numberButtons, Button switchNegativeButton, List<String> numberString, double[] number, char[] signTester) {

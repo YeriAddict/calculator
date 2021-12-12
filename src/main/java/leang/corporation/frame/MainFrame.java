@@ -6,6 +6,7 @@ import leang.corporation.panel.StandardPanel;
 import leang.corporation.panel.ScientificPanel;
 
 public class MainFrame extends JFrame {
+
 	FrameManager manager;
 	JTabbedPane modeTab = new JTabbedPane();
 	StandardPanel standardPanel = new StandardPanel();
@@ -28,4 +29,5 @@ public class MainFrame extends JFrame {
 		modeTab.setFont(new java.awt.Font("Lato", Font.BOLD, 12));
 		modeTab.setVisible(true);
 	}
+
 }

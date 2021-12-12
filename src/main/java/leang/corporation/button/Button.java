@@ -6,7 +6,8 @@ import javax.swing.JButton;
 
 public class Button extends JButton {
 
-	public void setProperties(String buttonContent, String backgroundColor, String foregroundColor, int fontSize, int x, int y, int width, int height) {
+	public void setProperties(String buttonContent, String backgroundColor, String foregroundColor, int fontSize, int x,
+			int y, int width, int height) {
 		this.setFocusable(false);
 		this.setText(buttonContent);
 		this.setBackground(Color.decode(backgroundColor));
@@ -14,4 +15,5 @@ public class Button extends JButton {
 		this.setFont(new java.awt.Font("Lato", Font.BOLD, fontSize));
 		this.setBounds(x, y, width, height);
 	}
+
 }
