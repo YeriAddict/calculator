@@ -193,28 +193,28 @@ public class Panel extends JPanel implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		buttonEvent.numberButtonsEvent(resultScreenText, e, numberButtons, switchNegativeButton, numberString, number,
+		buttonEvent.numberButtonsEvent(e, resultScreenText, numberButtons, switchNegativeButton, numberString, number,
 				signTester);
-		buttonEvent.dotButtonEvent(resultScreenText, e, dotButton, numberString, number);
-		buttonEvent.resetButtonEvent(resultScreenText, e, resetButton, numberString, operator, operatorTester,
+		buttonEvent.dotButtonEvent(e, resultScreenText, dotButton, numberString, number);
+		buttonEvent.resetButtonEvent(e, resultScreenText, resetButton, numberString, operator, operatorTester,
 				signTester, result, number);
-		buttonEvent.deleteButtonEvent(resultScreenText, e, deleteButton, numberString, signTester, number);
+		buttonEvent.deleteButtonEvent(e, resultScreenText, deleteButton, numberString, signTester, number);
 		System.out.println("Texte : " + resultScreenText.getText());
 		System.out.println(numberString.toString());
 		System.out.println("Number :" + number[0]);
 		System.out.println("Result :" + result[0]);
 
-		buttonEvent.additionButtonEvent(resultScreenText, e, additionButton, numberString, operator, operatorTester,
+		buttonEvent.additionButtonEvent(e, resultScreenText, additionButton, numberString, operator, operatorTester,
 				signTester, result);
-		buttonEvent.subtractionButtonEvent(resultScreenText, e, subtractionButton, numberString, operator,
+		buttonEvent.subtractionButtonEvent(e, resultScreenText, subtractionButton, numberString, operator,
 				operatorTester, signTester, result);
-		buttonEvent.multiplicationButtonEvent(resultScreenText, e, multiplicationButton, numberString, operator,
+		buttonEvent.multiplicationButtonEvent(e, resultScreenText, multiplicationButton, numberString, operator,
 				operatorTester, signTester, result);
-		buttonEvent.divisionButtonEvent(resultScreenText, e, divisionButton, numberString, operator, operatorTester,
+		buttonEvent.divisionButtonEvent(e, resultScreenText, divisionButton, numberString, operator, operatorTester,
 				signTester, result);
-		buttonEvent.moduloButtonEvent(resultScreenText, e, moduloButton, numberString, operator, operatorTester,
+		buttonEvent.moduloButtonEvent(e, resultScreenText, moduloButton, numberString, operator, operatorTester,
 				signTester, result);
-		buttonEvent.equalButtonEvent(resultScreenText, e, equalButton, numberString, operator, operatorTester,
+		buttonEvent.equalButtonEvent(e, resultScreenText, equalButton, numberString, operator, operatorTester,
 				signTester, result, number);
 	}
 	
