@@ -35,8 +35,14 @@ public class TextField extends JTextField{
 		this.setText(this.getText() + dot);
 	}
 	
-	public void switchSign() {
-		if (this.getText().contains("-") == false) {
+	public void switchSignPlus() {
+		if (this.getText().contains("-") == true && this.getText().isEmpty() == false) {
+			this.setText(this.getText().substring(1));
+		}
+	}
+	
+	public void switchSignMinus() {
+		if (this.getText().contains("-") == false && this.getText().isEmpty() == false) {
 			this.setText("-" + this.getText());
 		}
 	}
