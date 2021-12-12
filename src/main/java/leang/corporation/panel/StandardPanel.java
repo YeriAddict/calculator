@@ -150,7 +150,7 @@ public class StandardPanel extends JPanel implements ActionListener {
 		buttonEvent.numberButtonsEvent(resultScreenText, e, numberButtons, switchNegativeButton, numberString, number, signTester);
 		buttonEvent.dotButtonEvent(resultScreenText, e, dotButton, numberString, number);
 		buttonEvent.resetButtonEvent(resultScreenText, e, resetButton, numberString, operator, operatorTester, signTester, result, number);
-		buttonEvent.deleteButtonEvent(resultScreenText, e, deleteButton, numberString, number);
+		buttonEvent.deleteButtonEvent(resultScreenText, e, deleteButton, numberString, signTester, number);
 		System.out.println("Texte : " + resultScreenText.getText());
 		System.out.println(numberString.toString());
 		System.out.println("Number :" + number[0]);

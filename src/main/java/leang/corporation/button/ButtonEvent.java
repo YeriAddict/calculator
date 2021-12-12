@@ -45,7 +45,7 @@ public class ButtonEvent {
 		}
 	}
 
-	public void deleteButtonEvent(TextField resultScreenText, ActionEvent e, Button deleteButton, List<String> numberString, double[] number) {
+	public void deleteButtonEvent(TextField resultScreenText, ActionEvent e, Button deleteButton, List<String> numberString, char[] signTester, double[] number) {
 		if (e.getSource() == deleteButton) {
 			if (resultScreenText.getText().isEmpty() == false) {
 				resultScreenText.setText(resultScreenText.getText().substring(0, resultScreenText.getText().length() - 1));
@@ -55,6 +55,9 @@ public class ButtonEvent {
 						number[0] = Double.parseDouble(String.join("", numberString));
 					}
 				}	
+			}
+			else if (resultScreenText.getText().isEmpty() == true) {
+				signTester[0] = '+';
 			}
 		}
 	}
