@@ -9,8 +9,8 @@ public class MainFrame extends JFrame {
 
 	FrameManager manager;
 	JTabbedPane modeTab = new JTabbedPane();
-	StandardPanel standardPanel = new StandardPanel();
-	ScientificPanel scientificPanel = new ScientificPanel();
+	StandardPanel standardPanel = StandardPanel.getInstance();
+	ScientificPanel scientificPanel = ScientificPanel.getInstance();
 
 	public MainFrame(FrameManager manager) {
 		this.manager = manager;
