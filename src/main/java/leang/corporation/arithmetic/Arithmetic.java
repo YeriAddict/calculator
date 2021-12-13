@@ -66,5 +66,5 @@ public class Arithmetic {
 			return Math.sqrt(2 * Math.PI) * Math.pow(t, number + 0.5) * Math.exp(-t) * a;
 		}
 	}
-	
+
 }

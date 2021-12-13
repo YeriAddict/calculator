@@ -18,7 +18,8 @@ public class TextField extends JTextField {
 	}
 
 	public void setNumber(String number) {
-		if (this.getText().equals("0")) {
+		if (this.getText().equals("0") || this.getText().equals("NaN") || this.getText().equals("-NaN")
+				|| this.getText().equals("Infinity") || this.getText().equals("-Infinity")) {
 			this.setText(number);
 		} else if (this.getText().equals("0.")) {
 			this.setText(this.getText() + number);
@@ -44,5 +45,5 @@ public class TextField extends JTextField {
 			this.setText("-" + this.getText());
 		}
 	}
-	
+
 }

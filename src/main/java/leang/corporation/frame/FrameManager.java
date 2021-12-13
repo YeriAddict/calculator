@@ -4,7 +4,7 @@ import java.awt.Color;
 import javax.swing.*;
 
 public class FrameManager {
-	
+
 	MainFrame mainFrame;
 
 	public void setupMainFrame() {
