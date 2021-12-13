@@ -7,10 +7,8 @@ import leang.corporation.arithmetic.Arithmetic;
 import leang.corporation.field.TextField;
 
 public class ButtonEvent {
-	
-	Arithmetic arithmetic = new Arithmetic();
 
-	public void numberButtonsEvent(ActionEvent e, TextField resultScreenText, Button[] numberButtons, Button switchNegativeButton, List<String> numberString, double[] number, char[] signTester) {
+	public static void numberButtonsEvent(ActionEvent e, TextField resultScreenText, Button[] numberButtons, Button switchNegativeButton, List<String> numberString, double[] number, char[] signTester) {
 		for (int i = 0; i < 10; i++) {
 			if (e.getSource() == numberButtons[i]) {
 					resultScreenText.setNumber(String.valueOf(i));
@@ -32,7 +30,7 @@ public class ButtonEvent {
 		}
 	}
 
-	public void dotButtonEvent(ActionEvent e, TextField resultScreenText, Button dotButton, List<String> numberString, double[] number) {
+	public static void dotButtonEvent(ActionEvent e, TextField resultScreenText, Button dotButton, List<String> numberString, double[] number) {
 		if (e.getSource() == dotButton) {
 			if (resultScreenText.getText().contains(".") == false) {
 				if (Double.parseDouble(resultScreenText.getText()) == 0) {
@@ -46,7 +44,7 @@ public class ButtonEvent {
 		}
 	}
 
-	public void deleteButtonEvent(ActionEvent e, TextField resultScreenText, Button deleteButton, List<String> numberString, char[] signTester, double[] number) {
+	public static void deleteButtonEvent(ActionEvent e, TextField resultScreenText, Button deleteButton, List<String> numberString, char[] signTester, double[] number) {
 		if (e.getSource() == deleteButton) {
 			if (resultScreenText.getText().isEmpty() == false) {
 				resultScreenText.setText(resultScreenText.getText().substring(0, resultScreenText.getText().length() - 1));
@@ -63,7 +61,7 @@ public class ButtonEvent {
 		}
 	}
 
-	public void resetButtonEvent(ActionEvent e, TextField resultScreenText, Button resetButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result, double number[]) {
+	public static void resetButtonEvent(ActionEvent e, TextField resultScreenText, Button resetButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result, double number[]) {
 		if (e.getSource() == resetButton) {
 			numberString.clear();
 			result[0] = 0;
@@ -75,23 +73,23 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void equalButtonEvent(ActionEvent e, TextField resultScreenText, Button equalButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result, double number[]) {
+	public static void equalButtonEvent(ActionEvent e, TextField resultScreenText, Button equalButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result, double number[]) {
 		if (e.getSource() == equalButton) {
 			numberString.clear();
 			if (operator[0] == '+') {
-				result[0] = arithmetic.addition(result[0], number[0]);
+				result[0] = Arithmetic.addition(result[0], number[0]);
 			}
 			if (operator[0] == '-') {
-				result[0] = arithmetic.subtraction(result[0], number[0]);
+				result[0] = Arithmetic.subtraction(result[0], number[0]);
 			}
 			if (operator[0] == '*') {
-				result[0] = arithmetic.multiplication(result[0], number[0]);
+				result[0] = Arithmetic.multiplication(result[0], number[0]);
 			}
 			if (operator[0] == '/') {
-				result[0] = arithmetic.division(result[0], number[0]);
+				result[0] = Arithmetic.division(result[0], number[0]);
 			}
 			if (operator[0] == '%') {
-				result[0] = arithmetic.modulo(result[0], number[0]);
+				result[0] = Arithmetic.modulo(result[0], number[0]);
 			}
 			operatorTester[0] = 'N';
 			
@@ -106,7 +104,7 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void additionButtonEvent(ActionEvent e, TextField resultScreenText, Button additionButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result) {
+	public static void additionButtonEvent(ActionEvent e, TextField resultScreenText, Button additionButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result) {
 		if (e.getSource() == additionButton) {
 			signTester[0] = '+';
 			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
@@ -131,7 +129,7 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void subtractionButtonEvent(ActionEvent e, TextField resultScreenText, Button subtractionButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result) {
+	public static void subtractionButtonEvent(ActionEvent e, TextField resultScreenText, Button subtractionButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result) {
 		if (e.getSource() == subtractionButton) {
 			signTester[0] = '+';
 			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
@@ -156,7 +154,7 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void multiplicationButtonEvent(ActionEvent e, TextField resultScreenText, Button multiplicationButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result) {
+	public static void multiplicationButtonEvent(ActionEvent e, TextField resultScreenText, Button multiplicationButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result) {
 		if (e.getSource() == multiplicationButton) {
 			signTester[0] = '+';
 			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
@@ -181,7 +179,7 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void divisionButtonEvent(ActionEvent e, TextField resultScreenText, Button divisionButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result) {
+	public static void divisionButtonEvent(ActionEvent e, TextField resultScreenText, Button divisionButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result) {
 		if (e.getSource() == divisionButton) {
 			signTester[0] = '+';
 			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
@@ -206,7 +204,7 @@ public class ButtonEvent {
 		}
 	}
 	
-	public void moduloButtonEvent(ActionEvent e, TextField resultScreenText, Button moduloButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result) {
+	public static void moduloButtonEvent(ActionEvent e, TextField resultScreenText, Button moduloButton, List<String> numberString, char[] operator, char[] operatorTester, char[] signTester, double[] result) {
 		if (e.getSource() == moduloButton) {
 			signTester[0] = '+';
 			if (resultScreenText.getText().isEmpty() == false && operatorTester[0] == 'N') {
@@ -227,6 +225,46 @@ public class ButtonEvent {
 			}
 			else {
 				result[0] = 0;
+			}
+		}
+	}
+	
+	public static void cosineButtonEvent(ActionEvent e, TextField resultScreenText, Button cosineButton, List<String> numberString, double[] result) {
+		if (e.getSource() == cosineButton) {
+			if (resultScreenText.getText().isEmpty() == false) {
+				numberString.clear();
+				result[0] = Arithmetic.cosine(Double.parseDouble(resultScreenText.getText()));
+				resultScreenText.setText(String.valueOf(result[0]));
+			}
+		}
+	}
+	
+	public static void sineButtonEvent(ActionEvent e, TextField resultScreenText, Button sineButton, List<String> numberString, double[] result) {
+		if (e.getSource() == sineButton) {
+			if (resultScreenText.getText().isEmpty() == false) {
+				numberString.clear();
+				result[0] = Arithmetic.sine(Double.parseDouble(resultScreenText.getText()));
+				resultScreenText.setText(String.valueOf(result[0]));
+			}
+		}
+	}
+	
+	public static void tangentButtonEvent(ActionEvent e, TextField resultScreenText, Button tangentButton, List<String> numberString, double[] result) {
+		if (e.getSource() == tangentButton) {
+			if (resultScreenText.getText().isEmpty() == false) {
+				numberString.clear();
+				result[0] = Arithmetic.tangent(Double.parseDouble(resultScreenText.getText()));
+				resultScreenText.setText(String.valueOf(result[0]));
+			}
+		}
+	}
+	
+	public static void factorialButtonEvent(ActionEvent e, TextField resultScreenText, Button factorialButton, List<String> numberString, double[] result) {
+		if (e.getSource() == factorialButton) {
+			if (resultScreenText.getText().isEmpty() == false) {
+				numberString.clear();
+				result[0] = Arithmetic.factorial(Double.parseDouble(resultScreenText.getText()) + 1);
+				resultScreenText.setText(String.valueOf(result[0]));
 			}
 		}
 	}

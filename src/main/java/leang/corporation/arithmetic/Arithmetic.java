@@ -5,22 +5,22 @@ import java.lang.Math;
 public class Arithmetic {
 
 	// Method for addition
-	public double addition(double leftNumber, double rightNumber) {
+	public static double addition(double leftNumber, double rightNumber) {
 		return leftNumber + rightNumber;
 	}
 
 	// Method for subtraction
-	public double subtraction(double leftNumber, double rightNumber) {
+	public static double subtraction(double leftNumber, double rightNumber) {
 		return leftNumber - rightNumber;
 	}
 
 	// Method for multiplication
-	public double multiplication(double leftNumber, double rightNumber) {
+	public static double multiplication(double leftNumber, double rightNumber) {
 		return leftNumber * rightNumber;
 	}
 
 	// Method for division
-	public double division(double leftNumber, double rightNumber) {
+	public static double division(double leftNumber, double rightNumber) {
 		if (rightNumber == 0) {
 			throw new IllegalArgumentException("Infinity");
 		} else {
@@ -29,27 +29,27 @@ public class Arithmetic {
 	}
 
 	// Method for modulo
-	public double modulo(double leftNumber, double rightNumber) {
+	public static double modulo(double leftNumber, double rightNumber) {
 		return leftNumber % rightNumber;
 	}
 
 	// Method for cosine
-	public double cosine(double number) {
+	public static double cosine(double number) {
 		return Math.cos(number);
 	}
 
 	// Method for sine
-	public double sine(double number) {
+	public static double sine(double number) {
 		return Math.sin(number);
 	}
 
 	// Method for tangent
-	public double tangent(double number) {
+	public static double tangent(double number) {
 		return Math.tan(number);
 	}
 
 	// Method for Gamma function using Lanczos approximation
-	public double factorial(double number) {
+	public static double factorial(double number) {
 		if (number < 0.5) {
 			return Math.PI / (Math.sin(Math.PI * number) * factorial(1 - number));
 		} else {
