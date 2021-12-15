@@ -4,51 +4,38 @@ import java.lang.Math;
 
 public class Arithmetic {
 
-	// Method for addition
 	public static double addition(double leftNumber, double rightNumber) {
 		return leftNumber + rightNumber;
 	}
 
-	// Method for subtraction
 	public static double subtraction(double leftNumber, double rightNumber) {
 		return leftNumber - rightNumber;
 	}
 
-	// Method for multiplication
 	public static double multiplication(double leftNumber, double rightNumber) {
 		return leftNumber * rightNumber;
 	}
 
-	// Method for division
 	public static double division(double leftNumber, double rightNumber) {
-		if (rightNumber == 0) {
-			throw new IllegalArgumentException("Infinity");
-		} else {
-			return leftNumber / rightNumber;
-		}
+		return leftNumber / rightNumber;
 	}
 
-	// Method for modulo
 	public static double modulo(double leftNumber, double rightNumber) {
 		return leftNumber % rightNumber;
 	}
 
-	// Method for cosine
 	public static double cosine(double number) {
 		return Math.cos(number);
 	}
 
-	// Method for sine
 	public static double sine(double number) {
 		return Math.sin(number);
 	}
 
-	// Method for tangent
 	public static double tangent(double number) {
 		return Math.tan(number);
 	}
 
-	// Method for Gamma function using Lanczos approximation
 	public static double factorial(double number) {
 		if (number < 0.5) {
 			return Math.PI / (Math.sin(Math.PI * number) * factorial(1 - number));
