@@ -267,7 +267,7 @@ public class ButtonEvent {
 		if (e.getSource() == factorialButton) {
 			if (resultScreenText.getText().isEmpty() == false) {
 				numberString.clear();
-				result[0] = Arithmetic.factorial(Double.parseDouble(resultScreenText.getText()) + 1);
+				result[0] = Arithmetic.gamma(Double.parseDouble(resultScreenText.getText()) + 1);
 				resultScreenText.setText(String.valueOf(result[0]));
 			}
 		}
