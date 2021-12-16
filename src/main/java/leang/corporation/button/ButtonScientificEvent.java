@@ -8,8 +8,8 @@ import leang.corporation.field.TextField;
 
 /**
  * Class ButtonScientificEvent contains methods related to the Scientific
- * buttons. Those methods mainly use the Arithmetic class to handle events for
- * trigonometric operations and factorial
+ * operation buttons. Those methods mainly use the Arithmetic class to handle
+ * events for trigonometric operations and factorial
  * <p>
  * It currently supports methods for 4 buttons :
  * <ul>
