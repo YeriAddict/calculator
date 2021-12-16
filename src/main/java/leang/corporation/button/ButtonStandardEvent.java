@@ -63,7 +63,7 @@ public class ButtonStandardEvent {
 	 * @param operator         Character used to contain '+'
 	 * @param operatorTester   Character used to handle operation chaining and avoid
 	 *                         errors
-	 * @param signTester       Character used to handle the switchingSignButton
+	 * @param signTester       Character used to handle the switchSignButton
 	 *                         behavior
 	 * @param result           Result displayed after the operation
 	 * 
@@ -130,7 +130,7 @@ public class ButtonStandardEvent {
 	 * @param operator          Character used to contain '-'
 	 * @param operatorTester    Character used to handle operation chaining and
 	 *                          avoid errors
-	 * @param signTester        Character used to handle the switchingSignButton
+	 * @param signTester        Character used to handle the switchSignButton
 	 *                          behavior
 	 * @param result            Result displayed after the operation
 	 * 
@@ -197,7 +197,7 @@ public class ButtonStandardEvent {
 	 * @param operator             Character used to contain '*'
 	 * @param operatorTester       Character used to handle operation chaining and
 	 *                             avoid errors
-	 * @param signTester           Character used to handle the switchingSignButton
+	 * @param signTester           Character used to handle the switchSignButton
 	 *                             behavior
 	 * @param result               Result displayed after the operation
 	 * 
@@ -264,7 +264,7 @@ public class ButtonStandardEvent {
 	 * @param operator         Character used to contain '/'
 	 * @param operatorTester   Character used to handle operation chaining and avoid
 	 *                         errors
-	 * @param signTester       Character used to handle the switchingSignButton
+	 * @param signTester       Character used to handle the switchSignButton
 	 *                         behavior
 	 * @param result           Result displayed after the operation
 	 * 
@@ -331,7 +331,7 @@ public class ButtonStandardEvent {
 	 * @param operator         Character used to contain '%'
 	 * @param operatorTester   Character used to handle operation chaining and avoid
 	 *                         errors
-	 * @param signTester       Character used to handle the switchingSignButton
+	 * @param signTester       Character used to handle the switchSignButton
 	 *                         behavior
 	 * @param result           Result displayed after the operation
 	 * 
