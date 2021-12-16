@@ -2,131 +2,142 @@ package leang.corporation.arithmetic;
 
 import java.lang.Math;
 
-	 /**
-	 * Class Arithmetic contains methods for performing either standard or scientific operations. 
-	 * It uses the java.lang.Math class for advanced operations such as trigonometric functions for instance.
-	 * <p> Standard operations : 
-	 * <ul>
-	 * <li> Addition
-	 * <li> Subtraction
-	 * <li> Multiplication
-	 * <li> Division
-	 * <li> Modulo
-	 * </ul>
-	 * 
-	 * <p> Scientific operations : 
-	 * <ul> 
-	 * <li> Cosine
-	 * <li> Sine
-	 * <li> Tangent
-	 * <li> Gamma 
-	 * </ul>
-	 * 
-	 * @author LEANG Denis
-	 */
+/**
+ * Class Arithmetic contains methods for performing either standard or
+ * scientific operations. It uses the java.lang.Math class for advanced
+ * operations such as trigonometric functions for instance.
+ * <p>
+ * Standard operations :
+ * <ul>
+ * <li>Addition
+ * <li>Subtraction
+ * <li>Multiplication
+ * <li>Division
+ * <li>Modulo
+ * </ul>
+ * 
+ * <p>
+ * Scientific operations :
+ * <ul>
+ * <li>Cosine
+ * <li>Sine
+ * <li>Tangent
+ * <li>Gamma
+ * </ul>
+ * 
+ * @author LEANG Denis
+ */
 
 public class Arithmetic {
-	
+
 	/**
-	* Returns the sum of the arguments
-	* 
-	* @param leftNumber Left operand
-	* @param rightNumber Right operand
-	* @return The addition of the two operands 
-	*/
+	 * Returns the sum of the arguments
+	 * 
+	 * @param leftNumber  Left operand
+	 * @param rightNumber Right operand
+	 * @return The addition of the two operands
+	 */
 	public static double addition(double leftNumber, double rightNumber) {
 		return leftNumber + rightNumber;
 	}
 
 	/**
-	* Returns the difference of the arguments
-	* 
-	* @param leftNumber Left operand
-	* @param rightNumber Right operand
-	* @return The subtraction of the two operands 
-	*/
+	 * Returns the difference of the arguments
+	 * 
+	 * @param leftNumber  Left operand
+	 * @param rightNumber Right operand
+	 * @return The subtraction of the two operands
+	 */
 	public static double subtraction(double leftNumber, double rightNumber) {
 		return leftNumber - rightNumber;
 	}
 
 	/**
-	* Returns the product of the arguments
-	* 
-	* @param leftNumber Left operand
-	* @param rightNumber Right operand
-	* @return The multiplication of the two operands 
-	*/
+	 * Returns the product of the arguments
+	 * 
+	 * @param leftNumber  Left operand
+	 * @param rightNumber Right operand
+	 * @return The multiplication of the two operands
+	 */
 	public static double multiplication(double leftNumber, double rightNumber) {
 		return leftNumber * rightNumber;
 	}
 
 	/**
-	* Returns the quotient of the arguments
-	* <p> Special case :
-	* <ul>
-	* <li> If the denominator is 0, then the result is Infinity.
- 	* </ul>
-	* @param numerator Numerator
-	* @param denominator Denominator
-	* @return The division of the two operands 
-	*/
+	 * Returns the quotient of the arguments
+	 * <p>
+	 * Special case :
+	 * <ul>
+	 * <li>If the denominator is 0, then the result is Infinity.
+	 * </ul>
+	 * 
+	 * @param numerator   Numerator
+	 * @param denominator Denominator
+	 * @return The division of the two operands
+	 */
 	public static double division(double numerator, double denominator) {
 		return numerator / denominator;
 	}
 
 	/**
-	* Returns the arguments division's remainder
-	* <p> Special case :
-	* <ul> 
-	* <li> If the denominator is 0, then the result is NaN.
- 	* </ul>
-	* @param numerator Numerator
-	* @param denominator Denominator
-	* @return The modulo of the two operands 
-	*/
+	 * Returns the arguments division's remainder
+	 * <p>
+	 * Special case :
+	 * <ul>
+	 * <li>If the denominator is 0, then the result is NaN.
+	 * </ul>
+	 * 
+	 * @param numerator   Numerator
+	 * @param denominator Denominator
+	 * @return The modulo of the two operands
+	 */
 	public static double modulo(double numerator, double denominator) {
 		return numerator % denominator;
 	}
 
 	/**
-	* Returns the trigonometric cosine of the argument
-	* 
-	* @param number Number
-	* @return The cosine of the number in Radian
-	*/
+	 * Returns the trigonometric cosine of the argument
+	 * 
+	 * @param number Number
+	 * @return The cosine of the number in Radian
+	 */
 	public static double cosine(double number) {
 		return Math.cos(number);
 	}
 
 	/**
-	* Returns the trigonometric sine of the argument
-	* 
-	* @param number Number
-	* @return The sine of the number in Radian
-	*/
+	 * Returns the trigonometric sine of the argument
+	 * 
+	 * @param number Number
+	 * @return The sine of the number in Radian
+	 */
 	public static double sine(double number) {
 		return Math.sin(number);
 	}
 
 	/**
-	* Returns the trigonometric tangent of the argument
-	* 
-	* @param number Number
-	* @return The tangent of the number in Radian
-	*/
+	 * Returns the trigonometric tangent of the argument
+	 * 
+	 * @param number Number
+	 * @return The tangent of the number in Radian
+	 */
 	public static double tangent(double number) {
 		return Math.tan(number);
 	}
 
 	/**
-	* Returns the value of the Gamma function applied to the argument  
-	* <p> Special case :
-	* <ul> 
-	* <li> If the argument is (number + 1), then the result is the factorial of number
- 	* </ul>
-	* @param number Number
-	* @return The result of the Gamma function applied to the number using Lanczos Approximation.  
-	*/
+	 * Returns the value of the Gamma function applied to the argument
+	 * <p>
+	 * Special case :
+	 * <ul>
+	 * <li>If the argument is (number + 1), then the result is the factorial of
+	 * number
+	 * </ul>
+	 * 
+	 * @param number Number
+	 * @return The result of the Gamma function applied to the number using Lanczos
+	 *         Approximation.
+	 */
 	public static double gamma(double number) {
 		if (number < 0.5) {
 			return Math.PI / (Math.sin(Math.PI * number) * gamma(1 - number));
