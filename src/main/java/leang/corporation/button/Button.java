@@ -26,7 +26,7 @@ public class Button extends JButton {
 	 * <li>Width and Height of the JButton
 	 * </ul>
 	 * 
-	 * @param fieldContent    Text Content
+	 * @param buttonContent   Text Content
 	 * @param backgroundColor Background color
 	 * @param foregroundColor Foreground color
 	 * @param fontSize        Font Size
