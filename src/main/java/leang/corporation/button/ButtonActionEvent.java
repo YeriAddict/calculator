@@ -78,10 +78,10 @@ public class ButtonActionEvent {
 
 	/**
 	 * Adds an event handler for dot button. When clicked, if the TextField does not
-	 * already contain a dot, it will call the setDot() method and add a dot to the
-	 * its content. The dot will be added to the numberString list of string which
-	 * is then converted into a double and stored in the double list number (to
-	 * bypass pass by reference).
+	 * already contain a dot, it will call the setDot() method and add a dot to its
+	 * content. The dot will be added to the numberString list of string which is
+	 * then converted into a double and stored in the double list number (to bypass
+	 * pass by reference).
 	 * <p>
 	 * Special case :
 	 * <ul>
