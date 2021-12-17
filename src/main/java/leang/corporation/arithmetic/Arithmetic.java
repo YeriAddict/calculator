@@ -1,6 +1,8 @@
 package leang.corporation.arithmetic;
 
 import java.lang.Math;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  * Class Arithmetic contains methods for performing either standard or
@@ -68,7 +70,7 @@ public class Arithmetic {
 	 * <p>
 	 * Special case :
 	 * <ul>
-	 * <li>If the denominator is 0, then the result is Infinity.
+	 * <li>If the denominator is 0, then the result is Infinity and an alert popup appears
 	 * </ul>
 	 * 
 	 * @param numerator   Numerator
@@ -76,6 +78,10 @@ public class Arithmetic {
 	 * @return The division of the two operands
 	 */
 	public static double division(double numerator, double denominator) {
+		if (denominator == 0) {
+			JFrame alert = new JFrame();
+			JOptionPane.showMessageDialog(alert,"Division by 0 !");
+		}
 		return numerator / denominator;
 	}
 
@@ -84,7 +90,7 @@ public class Arithmetic {
 	 * <p>
 	 * Special case :
 	 * <ul>
-	 * <li>If the denominator is 0, then the result is NaN.
+	 * <li>If the denominator is 0, then the result is NaN and an alert popup is appears
 	 * </ul>
 	 * 
 	 * @param numerator   Numerator
@@ -92,6 +98,10 @@ public class Arithmetic {
 	 * @return The modulo of the two operands
 	 */
 	public static double modulo(double numerator, double denominator) {
+		if (denominator == 0) {
+			JFrame alert = new JFrame();
+			JOptionPane.showMessageDialog(alert,"Division by 0 !");
+		}
 		return numerator % denominator;
 	}
 
