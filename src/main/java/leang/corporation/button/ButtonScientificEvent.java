@@ -3,6 +3,9 @@ package leang.corporation.button;
 import java.awt.event.ActionEvent;
 import java.util.List;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 import leang.corporation.arithmetic.Arithmetic;
 import leang.corporation.field.TextField;
 
@@ -113,6 +116,15 @@ public class ButtonScientificEvent {
 	 * value). That operation will then be stored in result, which is a double list
 	 * (to bypass pass by reference) and displayed on screen.
 	 * 
+	 * <p>
+	 * Special cases :
+	 * <ul>
+	 * <li>If the number in TextField is higher than 141.22, then the result is
+	 * Infinity and an alert popup appears
+	 * <li>If the number in TextFiled is smaller than -142.22, then the result is
+	 * 0.0 and an alert popup appears
+	 * </ul>
+	 * 
 	 * @param e                ActionEvent object
 	 * @param resultScreenText TextField object
 	 * @param factorialButton  Factorial Button (!)
@@ -127,6 +139,14 @@ public class ButtonScientificEvent {
 		if (e.getSource() == factorialButton) {
 			if (resultScreenText.getText().isEmpty() == false) {
 				numberString.clear();
+				if (Double.parseDouble(resultScreenText.getText()) >= 141.22) {
+					JFrame alert = new JFrame();
+					JOptionPane.showMessageDialog(alert, "Factorial not supported beyond ! Number way too big");
+				}
+				if (Double.parseDouble(resultScreenText.getText()) <= -142.22) {
+					JFrame alert = new JFrame();
+					JOptionPane.showMessageDialog(alert, "Factorial not supported beyond ! Number way too small");
+				}
 				result[0] = Arithmetic.gamma(Double.parseDouble(resultScreenText.getText()) + 1);
 				resultScreenText.setText(String.valueOf(result[0]));
 			}
