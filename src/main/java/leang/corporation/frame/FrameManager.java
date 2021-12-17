@@ -11,6 +11,9 @@ import javax.swing.*;
  */
 public class FrameManager {
 
+	/**
+	 * MainFrame object
+	 */
 	MainFrame mainFrame;
 
 	/**
