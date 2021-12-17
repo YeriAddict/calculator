@@ -10,16 +10,28 @@ import leang.corporation.panel.ScientificPanel;
  * JTabbedPane is added to the frame with various properties. This JTabbedPane contains StandardPanel and ScientificPanel.
  * 
  * @see MainFrame
- * @see Panel
+ * @see leang.corporation.panel.Panel
  * @see StandardPanel
  * @see ScientificPanel
  * @author LEANG Denis
  */
 public class MainFrame extends JFrame {
 
+	/**
+	 * FrameManager object
+	 */
 	FrameManager manager;
+	/**
+	 * JTabbedPane object
+	 */
 	JTabbedPane modeTab = new JTabbedPane();
+	/**
+	 * StandardPanel singleton object
+	 */
 	StandardPanel standardPanel = StandardPanel.getInstance();
+	/**
+	 * ScientificPanel singleton object
+	 */
 	ScientificPanel scientificPanel = ScientificPanel.getInstance();
 
 	/**
