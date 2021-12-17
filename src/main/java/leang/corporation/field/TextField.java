@@ -59,7 +59,7 @@ public class TextField extends JTextField {
 	 * (which are often displayed after reaching operation limits), then the
 	 * TextField content will be replaced with the argument
 	 * <li>If the TextField contains "0." (when deleting chars for instance), then
-	 * the Textfield will concatenate the TextField content with the argument
+	 * the TextField will concatenate the TextField content with the argument
 	 * <li>If the TextField contains "-0" (when switching signs for instance), then
 	 * the TextField will erase the "0" and replace it with the argument
 	 * </ul>
@@ -91,7 +91,7 @@ public class TextField extends JTextField {
 
 	/**
 	 * Removes the first character of the TextField's content if it contains an
-	 * hypen (in first position) and if it is not empty
+	 * hyphen (in first position) and if it is not empty
 	 * 
 	 */
 	public void switchSignPlus() {
@@ -101,7 +101,7 @@ public class TextField extends JTextField {
 	}
 
 	/**
-	 * Adds an hypen as the first character in a TextField's content if it does not
+	 * Adds an hyphen as the first character in a TextField's content if it does not
 	 * already contain one and if it is not empty
 	 * 
 	 */
