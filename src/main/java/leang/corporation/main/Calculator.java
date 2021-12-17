@@ -2,8 +2,18 @@ package leang.corporation.main;
 
 import leang.corporation.frame.FrameManager;
 
+/**
+ * Class Calculator is the main class of this project. It supports the Nimbus LookAndFeel and creates the FrameManager.
+ * 
+ * @author LEANG Denis
+ */
 public class Calculator {
 
+	/**
+	 * Main Calculator
+	 * 
+	 * @param args Args
+	 */
 	public static void main(String[] args) {
 		try {
 			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
