@@ -25,6 +25,8 @@ public class MainFrame extends JFrame {
 	/**
 	 * Creates a MainFrame object
 	 * 
+	 * @param manager Frame manager
+	 * 
 	 * @see FrameManager
 	 */
 	public MainFrame(FrameManager manager) {
