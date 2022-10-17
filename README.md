@@ -91,7 +91,7 @@ Using this calculator is straightforward. It is possible to delete one character
 
 ### What is supported 
 
-This calculator can currently support these functionalities:
+This calculator can currently support these functionalities:  
 ➢ Operation chaining (example: clicking [2] [+] [3] [=] [-] [2] [=] will return 3)  
 ➢ Operations with negative operands  
 ➢ Successive operations when clicking equal multiple times: the last entered number is the operand with which the operation is made (example: clicking [2] [+] [3] [=] will return 5, [=] will return 8, [=] will return 11 …)  
