@@ -65,15 +65,15 @@ Clone the repository with SSH or HTTPS
 
 1. After importing the project, you just need to run the Calculator.java file  :
 
-<img src="images/starter.png" alt="Logo" width="900" height="400">
+<img src="images/starter.png" alt="Logo" width="400" height="900">
 
 2. You are now in standard mode and can computate standard operations :
 
-<img src="images/standard.png" alt="Logo" width="900" height="400">
+<img src="images/standard.png" alt="Logo" width="400" height="900">
 
 3. You can also switch to the scientific mode and computate four special operations (cos, sin, tan, factorial)
 
-<img src="images/scientific.png" alt="Logo" width="900" height="400">
+<img src="images/scientific.png" alt="Logo" width="400" height="900">
 
 ### How to use
 
