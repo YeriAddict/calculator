@@ -1,4 +1,4 @@
-# Java Calculator - LEANG Denis
+# Java Calculator
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -105,7 +105,5 @@ This calculator can currently support these functionalities:
 ## Contact
 
 LEANG Denis - denis.leang@telecom-st-etienne.fr 
-
-Link: [https://github.com/YeriAddict/Calculator](https://github.com/YeriAddict/Calculator)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
